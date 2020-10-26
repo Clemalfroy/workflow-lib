@@ -8,6 +8,17 @@
           scriptName: log
           inputs:
             message: ::workflow.input.firstMessage
+    - identifier: webhookTestStep
+      properties:
+        type: webhook
+        params:
+          url: 	https://webhook.site/53903fed-ad92-41bf-8625-bb273b6071e3
+          method: get
+          headers:
+            test1: toto
+            test2: titi
+          queryParams:
+            param1: param1
     - identifier: secondMessageLogger
       properties:
         type: script
