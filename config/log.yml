@@ -62,3 +62,4 @@
             message1: ::workflow.input.firstMessage
             message2: ::workflow.input.secondMessage
             message3: ::workflow.input.thirdMessage
+            stepsOutput: ::stepsOutput.webhookTestStep

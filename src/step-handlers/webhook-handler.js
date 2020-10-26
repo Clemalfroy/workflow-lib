@@ -20,7 +20,7 @@ class WebhookHandler extends Base {
   }
 
   async _sendWebhook({ url, method, headers, payload, queryParams }) {
-    return superagent[method.toLower()](url)
+    return superagent[method.toLowerCase()](url)
       .set(headers)
       .query(queryParams)
       .send(payload);
@@ -31,7 +31,7 @@ class WebhookHandler extends Base {
     return (
       this.params.url &&
       this.params.method &&
-      allowedMethods.includes(this.params.method.toLower())
+      allowedMethods.includes(this.params.method.toLowerCase())
     );
   }
 }
