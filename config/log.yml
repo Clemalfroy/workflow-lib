@@ -1,5 +1,9 @@
 - name: log
   type: instant
+  inputValidator:
+    - target: firstMessage
+      handlers:
+        - matchPattern: 'message'
   stepBlock:
     - identifier: firstMessageLogger
       properties:
